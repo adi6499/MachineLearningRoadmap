@@ -1,0 +1,73 @@
+    /* === Base Styling === */
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f2fe, #fef9c3);
+      margin: 0;
+      padding: 20px;
+      color: #1f2937;
+    }
+    h1 {
+      text-align: center;
+      color: #0ea5e9;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: auto;
+    }
+    li {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px) saturate(180%);
+      -webkit-backdrop-filter: blur(10px) saturate(180%);
+      margin: 8px 0;
+      padding: 14px 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    li.completed {
+      background: rgba(187, 247, 208, 0.9);
+      text-decoration: line-through;
+      color: #065f46;
+    }
+    input[type="checkbox"] {
+      margin-right: 12px;
+      transform: scale(1.2);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    /* === Nested lists === */
+    li ul {
+      list-style: none;
+      padding-left: 28px;
+      margin-top: 8px;
+      width: 100%;
+    }
+    li ul li {
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.5);
+      margin: 6px 0;
+      padding: 10px 14px;
+    }
+    li ul li.completed {
+      background: rgba(209, 250, 229, 0.9);
+      color: #15803d;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      h1 { font-size: 20px; }
+      li { font-size: 14px; padding: 12px; }
+      li ul li { font-size: 13px; padding: 10px; }
+    }
